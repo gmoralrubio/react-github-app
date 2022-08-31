@@ -24,9 +24,12 @@ export default function Search() {
   }
 
   return (
-    <Card className="relative grid grid-cols-4 items-center gap-4">
+    <Card className="relative sm:grid sm:grid-cols-4 sm:items-center sm:gap-4">
       {error.show && <Popover msg={error.msg}></Popover>}
-      <form className="relative col-span-3" onSubmit={handleSubmit}>
+      <form
+        className="relative mb-4 sm:col-span-3 sm:mb-0"
+        onSubmit={handleSubmit}
+      >
         <input
           type="text"
           placeholder="Type a GitHub user"
@@ -43,7 +46,7 @@ export default function Search() {
           <GoSearch style={{ color: '#fff' }} size={24} />
         </button>
       </form>
-      <div className="ml-4 text-xl font-bold">
+      <div className="text-xl font-bold sm:ml-4">
         <p className="mr-2 inline-block">Requests:</p>
         <span>
           {request}/{process.env.REACT_APP_MAX_REQUEST}

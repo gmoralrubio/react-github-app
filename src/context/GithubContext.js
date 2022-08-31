@@ -1,8 +1,5 @@
 import axios from 'axios'
 import React, { useContext, useEffect, useState } from 'react'
-import mockUser from './mockData/mockUser'
-import mockRepos from './mockData/mockRepos'
-import mockFollowers from './mockData/mockFollowers'
 
 const GithubContext = React.createContext()
 
