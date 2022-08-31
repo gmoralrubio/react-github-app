@@ -5,6 +5,7 @@ import Search from './../components/Search'
 import User from '../components/User'
 import ModalSpinner from '../components/ModalSpinner'
 import { useGithub } from '../context/GithubContext'
+import Card from './../components/Card'
 
 export default function Dashboard() {
   const { githubUser, repos, followers, isLoading } = useGithub()
@@ -21,7 +22,12 @@ export default function Dashboard() {
           {repos.length !== 0 && <Repos />}
         </>
       )}
-      {!githubUserData && <div>Please search for an user</div>}
+      {!githubUserData && (
+        <Card>
+          {' '}
+          <p className="text-xl font-bold">Please search for an user</p>
+        </Card>
+      )}
     </div>
   )
 }
