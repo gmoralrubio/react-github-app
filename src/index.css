@@ -3,6 +3,19 @@
 @supports (font-variation-settings: normal) {
   body { font-family: 'Inter var', sans-serif; }
 }
+body {
+  @apply bg-slate-50
+}
+
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+
 
 @tailwind base;
 @tailwind components;
